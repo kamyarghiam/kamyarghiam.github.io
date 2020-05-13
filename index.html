@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<center>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<title>Kamyar Ghiam</title>
+		<script src = "jQuery.js">
+		</script>
+	</head>
+
+	<body bgcolor="#222227">
+	
+	<section class = "background" id = "gradient">
+	<body bgcolor="#222227">
+
+		<div style="width: 640px; color: white">
+		<h1 align= "center" style = "font-size:30px">Kamyar Ghiam</h1>
+		<hr style = "border:1px solid white"></hr>
+
+		<table stlye = "border:2px solid red">
+		
+		<tr>
+			
+			<th><a href = "index.html"><button class="button"><span>Home </span></button> </th>
+			<th><a href = "resume.html"> <button class="button"><span>Resume </span></button> </th>
+			<th><a href = "projects.html"><button class="button"><span>Projects </span></button> </th>
+			<th> <a href = "calendar.html"> <button class="button"><span>Calendar </span></button> </th>
+			<th> <a href = "https://soundcloud.com/yessssss-210054932" target = "_blank"> <button class="button"><span>Music </span></button> </th>
+
+		</tr>
+		
+		</table>
+		<strong><div style = "font-size: 30px">
+		Clicks on photos: 
+		<span id = "visited"> 0
+		</div></strong>
+		<img class = "mainPhotos" src= "photos/me/File6.jpg" alt="Photo of Kamyar" style = "opacity: 1; max-width: 54%;"> 
+		<img class = "mainPhotos" src= "photos/me/File8.jpg" alt="Photo of Kamyar" style = "opacity: 1; max-width: 35%;"> 
+		<img class = "mainPhotos" src= "photos/me/File2.jpg" alt="Photo of Kamyar" style = "opacity: 1; max-width: 38%;"> 
+		<img class = "mainPhotos" src= "photos/me/File7.jpg" alt="Photo of Kamyar" style = "opacity: 1; max-width: 50%;"> 
+		<br></br>
+		
+
+		
+	
+  </span>
+		<p> <strong>Links</strong> </br>
+			
+		LinkdIn: <span> <a style="color:yellow"; href = "https://www.linkedin.com/in/kamyarghiam/" target = "_blank">https://www.linkedin.com/in/kamyarghiam</a> </br>
+		</span>
+		
+		GitHub: <span><a style="color:yellow"; href = "https://github.com/kamyarghiam/" target = "_blank">https://github.com/kamyarghiam</a> </br>
+
+		</p>
+		</span>
+		
+		<p> <strong>Emails</strong> </br>
+			<a style="color:yellow" href = "mailto:kamyarghiam@gmail.com?Subject=Hi%20Kamyar!" target = "_blank">  <span>
+			kamyarghiam@gmail.com</br>
+		</span></a>
+		<a style="color:yellow" href = "mailto:kghiam@andrew.cmu.edu?Subject=Hi%20Kamyar!" target = "_blank">
+		<span>
+			kghiam@andrew.cmu.edu</br>
+			</span>
+		</a>
+		</p>
+
+		<p> <strong>About Me</strong> 
+		<center>
+		I like to watch things grow. I like to plant an idea and watch it spread to many people. That's why I study business administration, to communicate my ideas effectively and convince people of what's important. I study computer science to structure my problem solving approach. Two years ago, I came into Carnegie Mellon with no computer science knowledge. Within one semester, I was teaching one of the most popular computer programming courses on campus. Within two semesters, I had a technical internship in London. Within three semesters, I was working as a machine learning engineer at the Harvard Innovation Labs. And finally, within four semesters, I had an internship at the largest e-commerce company in the world, Amazon. This semester, I'm giving back to the community. I'm working on a project to create location-based requests (email me for more information!). I want to make the most of my last four semesters at college. This summer will shape the rest of my career. I look forward to seeing what we can do together! <br>
+		<br>
+		</center>
+
+		 </p>
+		</div>
+	
+	<script>
+		function lowOpacity (){
+			this.style.opacity = .7;
+		}
+		function highOpacity (){
+			var photoF = document.getElementsByClassName("mainPhotos");
+			this.style.opacity = 1;
+		}
+		var visits = 0;
+		function clickTimes (){
+			visits +=1;
+			var printout = document.getElementById("visited");
+			printout.innerHTML = visits;
+		}
+		var field = document.getElementsByClassName("mainPhotos");
+		for (i = 0; i < field.length; i++){
+			field[i].addEventListener('mouseover', lowOpacity);
+			field[i].addEventListener('mouseout', highOpacity);
+			field[i].addEventListener('click', clickTimes);
+		}
+		function makeBold (){
+			$(this).css("font-weight", "bold");
+		}
+		function recover (){
+			$(this).css("font-weight", "normal");
+		}
+		$("span").hover(makeBold, recover)
+
+		
+
+	</script>
+	</body>
+</section>
+</center>
+<footer>
+	<center>
+	<ul style="display:inline">
+          <li>
+            <a href = "https://github.com/kamyarghiam" target = "_blank"> <img src= "photos/icons/github.png" alt="Github" width = "30" height = "30" hspace="20"></img></a>
+            <a href = "https://www.linkedin.com/in/kamyarghiam" target = "_blank"> <img src= "photos/icons/linkedin.png" alt="LinkdIn" width = "30" height = "30" hspace="20"></img></a>
+            <a href = "https://www.facebook.com/kamyar.ghiam" target = "_blank"> <img src= "photos/icons/facebook.png" alt="FB" width = "30" height = "30" hspace="20"></img></a>  
+            <a href = "https://soundcloud.com/yessssss-210054932" target = "_blank"> <img src= "photos/icons/soundcloud.png" alt="FB" width = "55" height = "25" hspace="20"></img></a>  
+            <a href = "https://stackoverflow.com/users/9947140/kamyar-ghiam" target = "_blank"> <img src= "photos/icons/stackoverflow.png" alt="FB" width = "35" height = "35" hspace="20"></img></a>  
+
+        </li>
+        </ul>
+	<p style = "color:gray"> &copy;  2018 Kamyar Ghiam</p>
+	</center>
+</footer>
+</html>
